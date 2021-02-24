@@ -37,3 +37,7 @@ func main() {
     }
 }
 ```
+
+## More Examples
+
+Check out the [Examples](https://github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/tree/main/examples) directory.
