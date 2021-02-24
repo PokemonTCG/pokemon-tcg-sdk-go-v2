@@ -17,12 +17,10 @@ const (
 // An Option can be applied to a request to modify the query.
 type Option func(r *Request)
 
-// Query sets a query for the request.
-// For example, to find all Pokemon named "jirachi" of type "psychic", use
-// []string{"name:jirachi", "types:psychic"}
-// Valid queries are the fields in the PokemonCard type.
+// Query sets a query for the request. Valid for GetCards and GetSets.
 //
 // Find examples here: https://docs.pokemontcg.io/#api_v2cards_list
+// and: https://docs.pokemontcg.io/#api_v2sets_list
 func Query(query ...string) func(r *Request) {
 	// Take care of the case of spaces in the search query - surround it with quotes.
 	// For example, `rarity:Rare Ultra` becomes `rarity:"Rare Ultra"`
