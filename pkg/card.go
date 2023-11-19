@@ -53,6 +53,8 @@ type PokemonCard struct {
 		Total        int    `json:"total"`
 		Legalities   struct {
 			Unlimited string `json:"unlimited"`
+			Standard  string `json:"standard"`
+			Expanded  string `json:"expanded"`
 		} `json:"legalities"`
 		PtcgoCode   string `json:"ptcgoCode"`
 		ReleaseDate string `json:"releaseDate"`
@@ -69,6 +71,8 @@ type PokemonCard struct {
 	NationalPokedexNumbers []int  `json:"nationalPokedexNumbers"`
 	Legalities             struct {
 		Unlimited string `json:"unlimited"`
+		Standard  string `json:"standard"`
+		Expanded  string `json:"expanded"`
 	} `json:"legalities"`
 	Images struct {
 		Small string `json:"small"`
