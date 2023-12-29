@@ -9,23 +9,23 @@ import (
 
 // A Set is a set of cards, e.g. Base Set or Sword & Shield: Vivid Voltage.
 type Set struct {
-	ID           string `json:"id"`
-	Name         string `json:"name"`
-	Series       string `json:"series"`
-	PrintedTotal int    `json:"printedTotal"`
-	Total        int    `json:"total"`
+	ID           string `json:"id" bson:"id"`
+	Name         string `json:"name" bson:"name"`
+	Series       string `json:"series" bson:"series"`
+	PrintedTotal int    `json:"printedTotal" bson:"printedTotal"`
+	Total        int    `json:"total" bson:"total"`
 	Legalities   struct {
-		Unlimited string `json:"unlimited"`
-		Standard  string `json:"standard"`
-		Expanded  string `json:"expanded"`
-	} `json:"legalities"`
-	PtcgoCode   string `json:"ptcgoCode"`
-	ReleaseDate string `json:"releaseDate"`
-	UpdatedAt   string `json:"updatedAt"`
+		Unlimited string `json:"unlimited" bson:"unlimited"`
+		Standard  string `json:"standard" bson:"standard"`
+		Expanded  string `json:"expanded" bson:"expanded"`
+	} `json:"legalities" bson:"legalities"`
+	PtcgoCode   string `json:"ptcgoCode" bson:"ptcgoCode"`
+	ReleaseDate string `json:"releaseDate" bson:"releaseDate"`
+	UpdatedAt   string `json:"updatedAt" bson:"updatedAt"`
 	Images      struct {
-		Symbol string `json:"symbol"`
-		Logo   string `json:"logo"`
-	} `json:"images"`
+		Symbol string `json:"symbol" bson:"symbol"`
+		Logo   string `json:"logo" bson:"logo"`
+	} `json:"images" bson:"images"`
 }
 
 // GetSets allows you to search and filter for sets using given options.
